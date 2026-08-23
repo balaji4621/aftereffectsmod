@@ -52,7 +52,7 @@ def verify_render_quality(rendered_video, golden_baseline_folder="out/golden_bas
     delta_e = compute_delta_e2000(frame, golden_frame)
 
     print(f"[QA Gate] SSIM Metric: {ssim_val:.4f} (Threshold >= 0.95)")
-    print(f"[QA Gate] ΔE2000 Metric: {delta_e:.4f} (Threshold <= 2.0)")
+    print(f"[QA Gate] DeltaE2000 Metric: {delta_e:.4f} (Threshold <= 2.0)")
 
     passed = ssim_val >= 0.95 and delta_e <= 2.0
     if passed:

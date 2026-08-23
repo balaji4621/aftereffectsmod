@@ -135,5 +135,6 @@
         proj.save(aepPath);
 
         app.endUndoGroup();
+        app.quit();
     } catch (mainErr) {}
 })();

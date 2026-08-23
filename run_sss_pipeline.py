@@ -2,6 +2,9 @@ import os
 import sys
 import time
 
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+
 from src.engine.stage_runner import StageRunner
 from src.engine.style_planner import plan_creative_style
 from src.engine.render_backends import get_best_available_backend
@@ -36,11 +39,11 @@ def stage_4_render_backend_execution(params):
     return [output_path]
 
 def stage_5_qa_verification(params):
-    print("[Pipeline Stage 5] Running SSIM & ΔE2000 QA Verification Gate...")
+    print("[Pipeline Stage 5] Running SSIM & DeltaE2000 QA Verification Gate...")
     out_video = os.path.join("out", "final_render.mp4")
     passed = verify_render_quality(out_video)
     if not passed:
-        raise RuntimeError("QA Gate Failed SSIM/ΔE2000 Quality Verification.")
+        raise RuntimeError("QA Gate Failed SSIM/DeltaE2000 Quality Verification.")
     return [out_video]
 
 def main():

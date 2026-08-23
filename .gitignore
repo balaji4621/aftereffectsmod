@@ -3,6 +3,7 @@ dist/
 build/
 out/
 *.aep
+*.aep Logs/
 *.mp4
 *.wav
 *.mp3

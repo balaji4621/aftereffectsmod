@@ -51,6 +51,11 @@ class ManifestLedger:
         stage_info = self.data["stages"].get(stage_name)
         if stage_info and stage_info.get("status") == "COMPLETED":
             if stage_info.get("stage_hash") == stage_hash:
+                outputs = stage_info.get("outputs", [])
+                if outputs:
+                    for out_path in outputs:
+                        if not os.path.exists(out_path):
+                            return False
                 return True
         return False
 

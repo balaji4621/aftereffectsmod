@@ -112,6 +112,7 @@
         proj.save(outAep);
 
         app.endUndoGroup();
+        app.quit();
     } catch (globalErr) {
         logError({
             status: "CRITICAL_ENGINE_FAILURE",

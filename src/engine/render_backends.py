@@ -14,16 +14,27 @@ class AEBackend(RenderBackend):
         self.aerender_exe = aerender_exe
 
     def render(self, style_plan_path: str, output_path: str) -> str:
-        print("[AEBackend] Compiling After Effects project via ExtendScript...")
-        jsx_script = r"C:\Users\ADMIN\OneDrive\Desktop\ae\build_ae_100_percent_edit.jsx"
-        cmd_ae = f'Start-Process -FilePath "{self.ae_exe}" -ArgumentList "-r", "{jsx_script}" -Wait'
-        subprocess.run(["powershell", "-Command", cmd_ae], check=True)
+        abs_output_path = os.path.abspath(output_path)
+        os.makedirs(os.path.dirname(abs_output_path), exist_ok=True)
+        try:
+            print("[AEBackend] Compiling After Effects project via ExtendScript...")
+            jsx_script = r"C:\Users\ADMIN\OneDrive\Desktop\ae\build_ae_100_percent_edit.jsx"
+            cmd_ae = f'Start-Process -FilePath "{self.ae_exe}" -ArgumentList "-r", "{jsx_script}" -Wait'
+            subprocess.run(["powershell", "-Command", cmd_ae], check=True, timeout=60)
 
-        print(f"[AEBackend] Executing aerender CLI export to {output_path}...")
-        aep_project = r"C:\Users\ADMIN\OneDrive\Desktop\ae\antigravity_100_percent.aep"
-        cmd_render = f'& "{self.aerender_exe}" -project "{aep_project}" -comp "PERFECT_ALIGNMENT_MASTER" -output "{output_path}"'
-        subprocess.run(["powershell", "-Command", cmd_render], check=True)
-        return output_path
+            print(f"[AEBackend] Executing aerender CLI export to {abs_output_path}...")
+            aep_project = r"C:\Users\ADMIN\OneDrive\Desktop\ae\antigravity_100_percent.aep"
+            cmd_render = f'& "{self.aerender_exe}" -project "{aep_project}" -comp "PERFECT_ALIGNMENT_MASTER" -output "{abs_output_path}"'
+            subprocess.run(["powershell", "-Command", cmd_render], check=True, timeout=120)
+
+            if not os.path.exists(abs_output_path):
+                raise RuntimeError("aerender process completed but output video file was not generated.")
+
+            return abs_output_path
+        except Exception as err:
+            print(f"[AEBackend Warning] AE execution timed out or failed ({err}). Utilizing FFmpeg GPU fallback...")
+            fallback = FFmpegBackend()
+            return fallback.render(style_plan_path, abs_output_path)
 
 class FFmpegBackend(RenderBackend):
     def render(self, style_plan_path: str, output_path: str) -> str:
