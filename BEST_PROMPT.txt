@@ -1,0 +1,29 @@
+Act as an elite Principal Video Infrastructure Engineer, Creative Technologist, and Lead Architect. Build a deterministic, enterprise-grade video production and automation engine combining Remotion 4.0 React compositing, Adobe After Effects 2025 ExtendScript automation, offline DSP signal analysis, and GPU AI post-processing.
+
+---
+
+### ARCHITECTURAL SPECIFICATION & STACK
+
+1. **Ingestion & Offline DSP Pipeline**:
+   - `scripts/discover-assets.mjs` scans assets, extracts stream metadata, and generates 720p/30fps proxies for 4K footage. Outputs `src/generated/manifest.json`.
+   - `scripts/analyze-audio.mjs` computes multi-band spectral flux (sub/kick 20-150Hz, snare 150-4000Hz, transients) into `src/generated/audio-features.json`.
+   - `scripts/extract-subtitles.mjs` generates forced-alignment word timestamps and emphasis metrics in `src/generated/subtitles.json`.
+   - `src/schemas/` validates data streams using strict Zod schemas (`manifest.schema.ts`, `audio-features.schema.ts`, `subtitles.schema.ts`).
+
+2. **Dual-Engine Motion Parity**:
+   - `src/utils/motion.ts` defines normalized 4-point Cubic Bézier vectors `[x1, y1, x2, y2]` evaluated via `bezier-easing`.
+   - `scripts/ae_helpers/bezier.jsx` translates these vectors into After Effects `KeyframeEase` influence and speed parameters.
+
+3. **Unified Master After Effects Engine**:
+   - `build_ae_master.jsx` dynamically loads manifests and configuration presets (`ae_presets/masterpiece.json`, `phonk.json`) using OS-agnostic relative paths (`$.fileName`).
+   - Implements structured JSON error logging to `out/logs/ae_build_<timestamp>.json`.
+
+4. **Remotion React & Futuristic AI Engine**:
+   - `BeatSyncedCamera.tsx` applies 3D translation/rotation impulses driven by audio spectral flux.
+   - `WebGLShaderPass.tsx` renders chromatic aberration and film grain post-processing overlay.
+   - `CaptionsLayer.tsx` presents karaoke word highlights with neon glow and spring entrance scaling.
+   - `src/engine/futuristic_ai.py` generates optical flow speed ramps, synthetic depth maps, and subject matting masks.
+
+5. **1-Click Web App UI & CLI Orchestration**:
+   - `server.py` & `web/index.html` host a local web UI dashboard (`http://localhost:8000`) with live execution logging and output video preview player.
+   - CLI Commands: `npm run ingest`, `npm run render:remotion`, `npm run render:ae`.

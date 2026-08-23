@@ -17,6 +17,7 @@ import { AudioMix } from './AudioMix';
 import { StoryProgressBar } from './StoryProgressBar';
 import { AudioBeatSync } from './AudioBeatSync';
 import { ShaderPass } from './ShaderPass';
+import { CaptionsLayer } from './CaptionsLayer';
 
 interface EffectsStackProps {
   metadata: MediaMetadata;
@@ -65,6 +66,9 @@ export const EffectsStack: React.FC<EffectsStackProps> = ({
           subtitle={config.typography.subtitleText}
         />
       )}
+
+      {/* Compositing Layer Pass 5.5: Animated Karaoke Captions Overlay */}
+      <CaptionsLayer />
 
       {/* Compositing Layer Pass 6: Audio Mix & Dynamic Auto-Ducking */}
       {metadata.primaryVideo && (

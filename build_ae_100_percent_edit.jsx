@@ -106,6 +106,28 @@
         var audioLayer = comp.layers.add(audioAsset);
         audioLayer.audioEnabled = true;
 
+        // Add Dynamic Animated Text Captions Layer
+        try {
+            var textLayer = comp.layers.addText("ANTIGRAVITY AI ENGINE");
+            var textProp = textLayer.property("Source Text");
+            var textDocument = textProp.value;
+            textDocument.fontSize = 72;
+            textDocument.fillColor = [0, 0.95, 0.99];
+            textDocument.strokeColor = [0, 0, 0];
+            textDocument.strokeWidth = 4;
+            textDocument.strokeOverFill = false;
+            textDocument.applyStroke = true;
+            textDocument.justification = ParagraphJustification.CENTER_JUSTIFY;
+            textProp.setValue(textDocument);
+            textLayer.property("Position").setValue([compWidth / 2, compHeight - 220]);
+            
+            // Add Scale Entrance Animation Keyframes
+            var textScale = textLayer.property("Scale");
+            textScale.setValueAtTime(0, [0, 0]);
+            textScale.setValueAtTime(0.3, [120, 120]);
+            textScale.setValueAtTime(0.5, [100, 100]);
+        } catch (eText) {}
+
         comp.motionBlur = true;
 
         // Save AE Project (.aep)

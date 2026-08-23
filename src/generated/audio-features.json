@@ -1,0 +1,4809 @@
+{
+  "audioPath": "public/hypnotic.mp3",
+  "duration": 10,
+  "sampleRate": 44100,
+  "fps": 60,
+  "totalFrames": 600,
+  "frames": [
+    {
+      "time": 0,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 0.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 0.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 1.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 1.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 2.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 2.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 3.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 3.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 4.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 4.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 5.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 5.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 6.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 6.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 7.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 7.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 8.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 8.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9,
+      "subKick": 1,
+      "snare": 0.05,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.017,
+      "subKick": 0.833,
+      "snare": 0.05,
+      "transient": 0.833,
+      "isKickHit": true,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.033,
+      "subKick": 0.667,
+      "snare": 0.05,
+      "transient": 0.667,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.05,
+      "subKick": 0.5,
+      "snare": 0.05,
+      "transient": 0.5,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.067,
+      "subKick": 0.333,
+      "snare": 0.05,
+      "transient": 0.333,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.083,
+      "subKick": 0.167,
+      "snare": 0.05,
+      "transient": 0.167,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.1,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.117,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.133,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.15,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.167,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.183,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.2,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.217,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.233,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.25,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.267,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.283,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.3,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.317,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.333,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.35,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.367,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.383,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.4,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.417,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.433,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.45,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.467,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.483,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.5,
+      "subKick": 1,
+      "snare": 0.85,
+      "transient": 1,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.517,
+      "subKick": 0.833,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": true,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.533,
+      "subKick": 0.667,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.55,
+      "subKick": 0.5,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.567,
+      "subKick": 0.333,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.583,
+      "subKick": 0.167,
+      "snare": 0.85,
+      "transient": 0.85,
+      "isKickHit": false,
+      "isSnareHit": true
+    },
+    {
+      "time": 9.6,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.617,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.633,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.65,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.667,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.683,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.7,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.717,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.733,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.75,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.767,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.783,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.8,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.817,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.833,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.85,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.867,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.883,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.9,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.917,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.933,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.95,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.967,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    },
+    {
+      "time": 9.983,
+      "subKick": 0,
+      "snare": 0.05,
+      "transient": 0.05,
+      "isKickHit": false,
+      "isSnareHit": false
+    }
+  ]
+}

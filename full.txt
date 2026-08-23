@@ -1,0 +1,93 @@
+================================================================================
+                    ANTIGRAVITY VIDEO ENGINE - MASTER DOCUMENTATION
+                                     full.txt
+================================================================================
+
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+1. COMPLETE ORIGINAL PROMPTS & SYSTEM SPECIFICATION
+2. IN-DEPTH TECHNICAL BREAKDOWN & BUILD PROCESS
+3. ARCHITECTURAL FRAMEWORK & COMPONENT SYSTEM
+4. INGESTION, DSP PIPELINE & STRICT SCHEMAS
+5. DUAL-ENGINE MOTION PARITY & BEZIER TRANSITIONS
+6. UNIFIED ADOBE AFTER EFFECTS ENGINE (EXTENDSCRIPT)
+7. REMOTION REACT VIDEO ENGINE & SHADERS
+8. FUTURISTIC AI MODULES & DAG ORCHESTRATION
+9. WEB APP UI DASHBOARD & CLI SUITE
+
+================================================================================
+1. COMPLETE ORIGINAL PROMPTS & SYSTEM SPECIFICATION
+================================================================================
+
+Act as an elite Principal Video Infrastructure Engineer, Creative Technologist, and Lead Architect.
+Build a deterministic, enterprise-grade video automation engine combining Remotion 4.0 React UI, 
+Adobe After Effects 2025 ExtendScript automation, offline DSP signal processing, 
+and GPU-accelerated AI enhancements.
+
+================================================================================
+2. IN-DEPTH TECHNICAL BREAKDOWN & BUILD PROCESS
+================================================================================
+
+STEP 1: INGESTION & OFFLINE DSP ANALYSIS
+- `scripts/discover-assets.mjs` probes media files, generates `src/generated/manifest.json`, and 
+  automatically creates 720p/30fps proxies for 4K video inputs.
+- `scripts/analyze-audio.mjs` calculates multi-band spectral flux (sub/kick, snare, transients) 
+  and writes `src/generated/audio-features.json`.
+- `scripts/extract-subtitles.mjs` performs word-level forced alignment writing `src/generated/subtitles.json`.
+- `src/schemas/` validates JSON outputs at runtime using Zod.
+
+STEP 2: DUAL-ENGINE MOTION PARITY
+- `src/utils/motion.ts` exposes 4-point Cubic Bézier vectors `[x1, y1, x2, y2]` evaluated via `bezier-easing`.
+- `scripts/ae_helpers/bezier.jsx` translates these vectors into After Effects `KeyframeEase` objects.
+
+STEP 3: UNIFIED ADOBE AFTER EFFECTS BUILDER
+- `build_ae_master.jsx` dynamically loads manifests and presets (`ae_presets/masterpiece.json`, `phonk.json`) 
+  using OS-agnostic relative paths (`$.fileName`).
+- Structured error logs are written to `out/logs/ae_build_<timestamp>.json`.
+
+STEP 4: REMOTION REACT & FUTURISTIC AI LAYER
+- `BeatSyncedCamera.tsx` applies 3D translation/rotation impulses driven by audio spectral flux.
+- `WebGLShaderPass.tsx` renders procedural chromatic aberration and film grain overlay.
+- `CaptionsLayer.tsx` presents dynamic karaoke text with word spring scaling.
+- `futuristic_ai.py` generates optical flow speed ramps, synthetic depth maps, and subject matting masks.
+
+STEP 5: WEB UI & AUTOMATION RUNNER
+- `server.py` hosts a web server at `http://localhost:8000` with automated output cleanup.
+- CLI scripts: `npm run ingest`, `npm run render:remotion`, `npm run render:ae`.
+
+================================================================================
+3. ARCHITECTURAL FRAMEWORK & COMPONENT SYSTEM
+================================================================================
+
+PROJECT DIRECTORY STRUCTURE:
+```
+C:\Users\ADMIN\OneDrive\Desktop\ae\
+├── server.py                        # Local Web App Server (http://localhost:8000)
+├── run_sss_pipeline.py              # Master SSS++ DAG Execution Script
+├── run_master_pipeline.py           # Headless aerender CLI Execution Script
+├── build_ae_master.jsx              # Unified Master AE ExtendScript Generator
+├── scripts/                         # Offline DSP & AE Helper Suite
+│   ├── discover-assets.mjs          # Media scanner & proxy builder
+│   ├── analyze-audio.mjs           # Multi-band spectral flux analyzer
+│   ├── extract-subtitles.mjs        # Forced alignment subtitle generator
+│   └── ae_helpers/
+│       └── bezier.jsx               # AE Cubic Bezier vector math helper
+├── ae_presets/                      # Configuration Presets (masterpiece, phonk)
+│   ├── masterpiece.json
+│   └── phonk.json
+├── src/
+│   ├── schemas/                     # Zod Validation Schemas
+│   ├── generated/                   # Generated Manifest JSONs
+│   ├── components/                  # Remotion React Modular Components
+│   └── engine/                      # DAG Engine & Futuristic AI Suite
+├── web/                             # Web App Dashboard Frontend
+├── out/                             # Render Deliverables & Manifest Ledger
+├── public/                          # Media Input Assets
+├── README.md                        # Master Project Documentation
+├── WHAT_WE_DID.txt                  # Engine Summary
+└── full.txt                         # Technical Deep Dive Documentation
+```
+
+================================================================================
+END OF DOCUMENTATION - full.txt
+================================================================================

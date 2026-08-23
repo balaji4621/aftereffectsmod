@@ -1,0 +1,22 @@
+Act as a World-Class VFX Supervisor, AI Video Researcher, and Lead Infrastructure Architect. Upgrade the Antigravity video engine into an enterprise-grade reference video recreation engine.
+
+---
+
+### CORE OBJECTIVES FOR SSS++ ENGINE ENHANCEMENT
+
+1. **Offline DSP & Ingestion Pipeline**:
+   - Execute `npm run ingest` to extract video/audio stream metadata, sub/kick/snare spectral flux features, and word-level forced alignment subtitles into `src/generated/`.
+   - Validate input JSON structures against Zod runtime schemas in `src/schemas/`.
+
+2. **Dual-Engine Motion Parity**:
+   - Synchronize Remotion React animation curves and native After Effects `KeyframeEase` handles using 4-point Cubic Bézier vectors (`src/utils/motion.ts` & `scripts/ae_helpers/bezier.jsx`).
+
+3. **Unified ExtendScript Engine & Configuration Presets**:
+   - Drive After Effects project generation dynamically using `build_ae_master.jsx` and preset configurations (`ae_presets/masterpiece.json`, `phonk.json`).
+
+4. **Futuristic AI Enhancements**:
+   - Integrate optical flow motion vector calculation, synthetic depth map sequence generation, and foreground subject matting masks (`src/engine/futuristic_ai.py`).
+   - Validate render outputs against golden baselines via SSIM ($\ge 0.95$) and CIEDE2000 $\Delta E_{00}$ ($\le 2.0$) color distance checks (`src/engine/qa_gate.py`).
+
+5. **1-Click Web App UI**:
+   - Launch `python server.py` to manage video intake, trigger automated DAG execution, and preview renders directly in the browser at `http://localhost:8000`.

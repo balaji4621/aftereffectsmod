@@ -1,0 +1,64 @@
+================================================================================
+          ANTIGRAVITY AFTER EFFECTS & REMOTION VIDEO ENGINE SUMMARY
+================================================================================
+
+PROJECT OVERVIEW:
+Built an enterprise-grade, end-to-end After Effects & Remotion video production engine 
+featuring dual-engine motion parity, offline DSP ingestion, futuristic AI modules, and 
+a 1-click web dashboard UI.
+
+--------------------------------------------------------------------------------
+1. INGESTION & OFFLINE DSP PIPELINE (scripts/ & src/schemas/)
+--------------------------------------------------------------------------------
+- Asset Discovery & Proxy Generator (`scripts/discover-assets.mjs`):
+  Scans public assets, extracts metadata, and generates 720p/30fps proxies for 4K video streams.
+  Outputs `src/generated/manifest.json`.
+
+- Multi-Band Audio Spectral Flux Analysis (`scripts/analyze-audio.mjs`):
+  Extracts Sub/Kick (20-150Hz), Snare (150-4000Hz), and transient energy spikes.
+  Outputs `src/generated/audio-features.json`.
+
+- Word-Level Forced Alignment Subtitles (`scripts/extract-subtitles.mjs`):
+  Generates word timestamps, confidence metrics, and emphasis scores.
+  Outputs `src/generated/subtitles.json`.
+
+- Strict Zod Schemas (`src/schemas/`):
+  Zod schema validation for manifest, audio features, and subtitle data streams.
+
+--------------------------------------------------------------------------------
+2. DUAL-ENGINE MOTION PARITY & BEZIER TRANSITIONS
+--------------------------------------------------------------------------------
+- Normalized Cubic Bézier Math (`src/utils/motion.ts`):
+  Defines 4-point Bézier vectors `[x1, y1, x2, y2]` consumed by Remotion via `bezier-easing`.
+
+- ExtendScript Bezier Helper (`scripts/ae_helpers/bezier.jsx`):
+  Translates Cubic Bézier coordinates into After Effects `KeyframeEase` influence & speed.
+
+--------------------------------------------------------------------------------
+3. UNIFIED MASTER AFTER EFFECTS ENGINE & PRESETS
+--------------------------------------------------------------------------------
+- Master Script (`build_ae_master.jsx`):
+  Unified script replacing legacy generators. Dynamically loads generated manifests via `$.fileName`
+  and logs errors to `out/logs/ae_build_<timestamp>.json`.
+- Configuration Presets (`ae_presets/masterpiece.json`, `ae_presets/phonk.json`).
+
+--------------------------------------------------------------------------------
+4. REMOTION REACT & FUTURISTIC AI LAYER (src/ & src/engine/)
+--------------------------------------------------------------------------------
+- Beat-Synced Camera (`src/components/BeatSyncedCamera.tsx`):
+  Applies 3D translation & rotation impulses tied directly to audio kick/snare hits.
+- WebGL Post-Processing Pass (`src/components/WebGLShaderPass.tsx`):
+  Procedural RGB chromatic aberration and film grain overlay.
+- Dynamic Karaoke Captions (`src/components/CaptionsLayer.tsx`):
+  Word highlights with neon cyan glow and spring scale entrance animations.
+- Futuristic AI Modules (`src/engine/futuristic_ai.py`):
+  Optical flow speed ramps, synthetic depth maps, and subject matting masks.
+
+--------------------------------------------------------------------------------
+5. WEB UI & CLI ORCHESTRATION (server.py & package.json)
+--------------------------------------------------------------------------------
+- 1-Click Local Web App (`server.py` & `web/index.html`):
+  Runs HTTP web dashboard at `http://localhost:8000` with live player and log console.
+- CLI Commands: `npm run ingest`, `npm run render:remotion`, `npm run render:ae`.
+
+================================================================================

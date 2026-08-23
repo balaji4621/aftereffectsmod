@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity AI Video Engine Dashboard</title>
+    <style>
+        :root {
+            --bg-dark: #0a0c10;
+            --panel-bg: #12161f;
+            --accent-cyan: #00f2fe;
+            --accent-purple: #7000ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 320px;
+            background-color: var(--panel-bg);
+            border-right: 1px solid var(--border-color);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .brand {
+            font-size: 20px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+        }
+
+        .upload-box {
+            border: 2px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .upload-box:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+        .option-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.03);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .btn-run {
+            margin-top: auto;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .btn-run:hover {
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .preview-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 480px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .log-terminal {
+            height: 180px;
+            background: #05070a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: 'Consolas', monospace;
+            font-size: 12px;
+            color: #38bdf8;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="brand">ANTIGRAVITY AI ENGINE</div>
+
+        <div>
+            <div class="section-title">1. Reference & Footage Intake</div>
+            <div class="upload-box" onclick="document.getElementById('refFile').click()">
+                <div style="font-size: 24px;">🎥</div>
+                <div style="font-size: 12px; font-weight: 600; margin-top: 6px;">Select Reference Video</div>
+                <div style="font-size: 10px; color: var(--text-muted);" id="refFileName">clip_1.mp4</div>
+                <input type="file" id="refFile" style="display:none" onchange="updateFileName(this, 'refFileName')">
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">2. Futuristic AI Modules</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="option-toggle">
+                    <span>Optical Flow Speed Ramps</span>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="option-toggle">
+                    <span>Depth Map Estimation</span>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="option-toggle">
+                    <span>SAM 2 Subject Matting</span>
+                    <input type="checkbox" checked>
+                </div>
+                <div class="option-toggle">
+                    <span>After Effects 2025 Headless</span>
+                    <input type="checkbox" checked>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-run" onclick="startEditProcess()">START AUTOMATED EDIT</button>
+    </div>
+
+    <div class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="margin: 0; font-size: 22px;">Live Video Output & AI Compositor</h2>
+            <div id="statusBadge" style="background: rgba(0,242,254,0.1); color: var(--accent-cyan); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">Engine Ready</div>
+        </div>
+
+        <div class="preview-card">
+            <video id="videoPlayer" controls poster="https://via.placeholder.com/640x360/12161f/00f2fe?text=Antigravity+AI+Render+Preview">
+                <source src="/out/final_render.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div>
+            <div class="section-title">Live Execution Console Log</div>
+            <div class="log-terminal" id="terminalLog">[System] Engine Initialized. Ready for 1-Click Automated Edit.</div>
+        </div>
+    </div>
+
+    <script>
+        function updateFileName(input, targetId) {
+            if (input.files && input.files[0]) {
+                document.getElementById(targetId).innerText = input.files[0].name;
+            }
+        }
+
+        function appendLog(msg) {
+            const term = document.getElementById('terminalLog');
+            term.innerText += "\n" + msg;
+            term.scrollTop = term.scrollHeight;
+        }
+
+        async function startEditProcess() {
+            document.getElementById('statusBadge').innerText = "Processing DAG Engine...";
+            document.getElementById('statusBadge').style.color = "#fbbf24";
+            appendLog("[DAG Orchestrator] Spawning StageRunner pipeline...");
+
+            try {
+                const resp = await fetch('/api/run', { method: 'POST' });
+                const data = await resp.json();
+                
+                appendLog(data.log);
+                document.getElementById('statusBadge').innerText = "Render Complete!";
+                document.getElementById('statusBadge').style.color = "#4ade80";
+
+                const player = document.getElementById('videoPlayer');
+                player.src = "/out/final_render.mp4?t=" + new Date().getTime();
+                player.play();
+            } catch (err) {
+                appendLog("[Error] Failed to execute pipeline: " + err);
+                document.getElementById('statusBadge').innerText = "Execution Error";
+                document.getElementById('statusBadge').style.color = "#f87171";
+            }
+        }
+    </script>
+</body>
+</html>

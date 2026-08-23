@@ -1,0 +1,20 @@
+{
+  "presetName": "phonk",
+  "version": "1.0.0",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "transitionDuration": 0.15,
+  "bezierVector": [0.87, 0.0, 0.13, 1.0],
+  "glow": {
+    "enabled": true,
+    "threshold": 20,
+    "radius": 100,
+    "intensity": 1.5
+  },
+  "colorBalance": {
+    "enabled": true,
+    "brightness": 12,
+    "contrast": 50
+  }
+}

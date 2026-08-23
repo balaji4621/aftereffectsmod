@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-08-23T05:52:26.377Z",
+  "items": [
+    {
+      "id": "clip_1",
+      "filename": "clip_1.mp4",
+      "filepath": "public/clip_1.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_1_color_matched",
+      "filename": "clip_1_color_matched.mp4",
+      "filepath": "public/clip_1_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_2",
+      "filename": "clip_2.mp4",
+      "filepath": "public/clip_2.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_2_color_matched",
+      "filename": "clip_2_color_matched.mp4",
+      "filepath": "public/clip_2_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_3",
+      "filename": "clip_3.mp4",
+      "filepath": "public/clip_3.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_3_color_matched",
+      "filename": "clip_3_color_matched.mp4",
+      "filepath": "public/clip_3_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_4",
+      "filename": "clip_4.mp4",
+      "filepath": "public/clip_4.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_4_color_matched",
+      "filename": "clip_4_color_matched.mp4",
+      "filepath": "public/clip_4_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_5",
+      "filename": "clip_5.mp4",
+      "filepath": "public/clip_5.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_5_color_matched",
+      "filename": "clip_5_color_matched.mp4",
+      "filepath": "public/clip_5_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_6",
+      "filename": "clip_6.mp4",
+      "filepath": "public/clip_6.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "clip_6_color_matched",
+      "filename": "clip_6_color_matched.mp4",
+      "filepath": "public/clip_6_color_matched.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "hypnotic",
+      "filename": "hypnotic.mp3",
+      "filepath": "public/hypnotic.mp3",
+      "type": "audio",
+      "duration": 10
+    },
+    {
+      "id": "hypnotic_yt",
+      "filename": "hypnotic_yt.webm",
+      "filepath": "public/hypnotic_yt.webm",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "source_video",
+      "filename": "source_video.mp4",
+      "filepath": "public/source_video.mp4",
+      "type": "video",
+      "duration": 10,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "hasAudio": false
+    },
+    {
+      "id": "youtube_song",
+      "filename": "youtube_song.m4a",
+      "filepath": "public/youtube_song.m4a",
+      "type": "audio",
+      "duration": 10
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "language": "en",
+  "fullText": "HIGH ENERGY ANTIGRAVITY AI VIDEO PRODUCTION ENGINE",
+  "words": [
+    {
+      "text": "HIGH",
+      "start": 0,
+      "end": 0.5,
+      "confidence": 0.98,
+      "emphasis": 0.9
+    },
+    {
+      "text": "ENERGY",
+      "start": 0.55,
+      "end": 1.1,
+      "confidence": 0.99,
+      "emphasis": 1
+    },
+    {
+      "text": "ANTIGRAVITY",
+      "start": 1.15,
+      "end": 2,
+      "confidence": 0.95,
+      "emphasis": 1
+    },
+    {
+      "text": "AI",
+      "start": 2.05,
+      "end": 2.5,
+      "confidence": 0.97,
+      "emphasis": 0.8
+    },
+    {
+      "text": "VIDEO",
+      "start": 2.55,
+      "end": 3.1,
+      "confidence": 0.99,
+      "emphasis": 0.85
+    },
+    {
+      "text": "PRODUCTION",
+      "start": 3.15,
+      "end": 4,
+      "confidence": 0.96,
+      "emphasis": 0.95
+    },
+    {
+      "text": "ENGINE",
+      "start": 4.05,
+      "end": 5,
+      "confidence": 0.98,
+      "emphasis": 0.9
+    }
+  ]
+}

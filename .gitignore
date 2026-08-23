@@ -7,3 +7,5 @@ out/
 *.wav
 *.mp3
 .DS_Store
+__pycache__/
+*.log

@@ -1,0 +1,20 @@
+{
+  "presetName": "masterpiece",
+  "version": "1.0.0",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "transitionDuration": 0.3,
+  "bezierVector": [0.25, 0.1, 0.25, 1.0],
+  "glow": {
+    "enabled": true,
+    "threshold": 40,
+    "radius": 65,
+    "intensity": 0.95
+  },
+  "colorBalance": {
+    "enabled": true,
+    "brightness": 8,
+    "contrast": 38
+  }
+}
