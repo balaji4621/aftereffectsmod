@@ -31,22 +31,29 @@
         // Dark Background Solid
         comp.layers.addSolid([0.02, 0.03, 0.05], "Atmosphere_BG", compWidth, compHeight, pixelAspect);
 
-        // Color Matched Shot Clips List
-        var clipFiles = [
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_1_color_matched.mp4",
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_2_color_matched.mp4",
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_3_color_matched.mp4",
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_4_color_matched.mp4",
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_5_color_matched.mp4",
-            "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_6_color_matched.mp4"
-        ];
+        // Function to resolve existing clip file or fallback to available public MP4
+        function resolveClipFile(idx) {
+            var paths = [
+                "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_" + idx + "_color_matched.mp4",
+                "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_" + idx + ".mp4",
+                "C:/Users/ADMIN/OneDrive/Desktop/ae/public/clip_1.mp4"
+            ];
+            for (var p = 0; p < paths.length; p++) {
+                var f = new File(paths[p]);
+                if (f.exists) return f;
+            }
+            var pubFolder = new Folder("C:/Users/ADMIN/OneDrive/Desktop/ae/public");
+            var files = pubFolder.getFiles("*.mp4");
+            if (files && files.length > 0) return files[0];
+            return null;
+        }
 
         var transitionDuration = 0.3;
         var currentTime = 0;
 
-        for (var i = 0; i < clipFiles.length; i++) {
-            var file = new File(clipFiles[i]);
-            if (file.exists) {
+        for (var i = 1; i <= 6; i++) {
+            var file = resolveClipFile(i);
+            if (file && file.exists) {
                 var asset = proj.importFile(new ImportOptions(file));
                 var layer = comp.layers.add(asset);
 

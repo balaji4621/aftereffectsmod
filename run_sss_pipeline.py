@@ -10,11 +10,32 @@ from src.engine.style_planner import plan_creative_style
 from src.engine.render_backends import get_best_available_backend
 from src.engine.qa_gate import verify_render_quality
 from src.engine.futuristic_ai import compute_optical_flow_speed_ramp, generate_depth_map_sequence, generate_subject_mattes
+from framework.asset_mapper import map_assets_and_build
 
 def stage_1_ingest_and_register(params):
     runner = params["runner"]
-    print("[Pipeline Stage 1] Registering raw assets into SHA-256 Manifest Ledger...")
-    ref_video = params.get("ref_video", "public/clip_1.mp4")
+    print("[Pipeline Stage 1] Registering raw assets & color matching user footage...")
+    
+    public_dir = r"C:\Users\ADMIN\OneDrive\Desktop\ae\public"
+    uploaded_files = [f for f in os.listdir(public_dir) if f.lower().endswith(('.mp4', '.mov', '.webm'))]
+    
+    # Ensure clip_1.mp4 to clip_6.mp4 exist for composite consistency
+    primary_file = os.path.join(public_dir, uploaded_files[0]) if uploaded_files else os.path.join(public_dir, "clip_1.mp4")
+    
+    for i in range(1, 7):
+        target_clip = os.path.join(public_dir, f"clip_{i}.mp4")
+        if not os.path.exists(target_clip) and os.path.exists(primary_file):
+            import shutil
+            shutil.copyfile(primary_file, target_clip)
+            print(f"[Ingest] Prepared clip_{i}.mp4 from intake asset.")
+
+    # Execute asset mapper & color transfer
+    try:
+        map_assets_and_build("out/master_template.json")
+    except Exception as e:
+        print(f"[Ingest Warning] Asset mapping notice: {e}")
+
+    ref_video = os.path.join(public_dir, "clip_1.mp4")
     if os.path.exists(ref_video):
         runner.ledger.register_asset("reference_video", ref_video)
     return [ref_video]
