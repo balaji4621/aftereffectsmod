@@ -3,235 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antigravity AI Video Engine Dashboard</title>
+    <title>Antigravity Studio - AI Video Engine Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #0a0c10;
-            --panel-bg: #12161f;
+            --bg-dark: #07090e;
+            --panel-bg: #0f131c;
+            --panel-border: #1e2638;
             --accent-cyan: #00f2fe;
-            --accent-purple: #7000ff;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border-color: #1e293b;
+            --accent-purple: #9d4edd;
+            --accent-green: #10b981;
+            --accent-yellow: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Space Grotesk', system-ui, sans-serif;
             background-color: var(--bg-dark);
-            color: var(--text-main);
+            color: var(--text-primary);
             display: flex;
             height: 100vh;
             overflow: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(157, 78, 221, 0.05) 0%, transparent 40%);
         }
 
+        /* Sidebar Navigation & Controls */
         .sidebar {
-            width: 320px;
+            width: 360px;
             background-color: var(--panel-bg);
-            border-right: 1px solid var(--border-color);
+            border-right: 1px solid var(--panel-border);
             padding: 24px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .brand {
-            font-size: 20px;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-
-        .section-title {
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-        }
-
-        .upload-box {
-            border: 2px dashed var(--border-color);
-            border-radius: 8px;
-            padding: 16px;
-            text-align: center;
-            background: rgba(255,255,255,0.02);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .upload-box:hover {
-            border-color: var(--accent-cyan);
-            background: rgba(0, 242, 254, 0.05);
-        }
-
-        .option-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(255,255,255,0.03);
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-size: 13px;
-        }
-
-        .btn-run {
-            margin-top: auto;
-            padding: 14px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            border: none;
-            border-radius: 8px;
-            color: #fff;
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .btn-run:hover {
-            transform: translateY(-2px);
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 30px;
             display: flex;
             flex-direction: column;
             gap: 20px;
             overflow-y: auto;
         }
 
-        .preview-card {
-            background: var(--panel-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+
+        .preset-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .preset-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .preset-card:hover, .preset-card.active {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 242, 254, 0.08);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+        }
+
+        .preset-name {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .preset-desc {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .upload-dropzone {
+            border: 2px dashed var(--panel-border);
+            border-radius: 10px;
             padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.01);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .upload-dropzone:hover {
+            border-color: var(--accent-cyan);
+            background: rgba(0, 242, 254, 0.04);
+        }
+
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .slider-control {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        input[type="range"] {
+            accent-color: var(--accent-cyan);
+        }
+
+        .btn-launch {
+            margin-top: auto;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border: none;
+            border-radius: 10px;
+            color: #000;
+            font-weight: 800;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 25px rgba(0, 242, 254, 0.35);
+            transition: all 0.2s ease;
+        }
+
+        .btn-launch:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 242, 254, 0.5);
+        }
+
+        /* Main Workspace Area */
+        .workspace {
+            flex: 1;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .workspace-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+
+        /* Pipeline Stepper */
+        .stepper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .step-node {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+
+        .step-node.active {
+            border-color: var(--accent-cyan);
+            color: var(--text-primary);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+        }
+
+        /* Video Player Stage */
+        .player-stage {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
 
         video {
             max-width: 100%;
             max-height: 480px;
             border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
         }
 
-        .log-terminal {
+        /* Terminal Console */
+        .terminal-box {
             height: 180px;
-            background: #05070a;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 14px;
-            font-family: 'Consolas', monospace;
+            background: #040609;
+            border: 1px solid var(--panel-border);
+            border-radius: 10px;
+            padding: 16px;
+            font-family: 'JetBrains Mono', monospace;
             font-size: 12px;
             color: #38bdf8;
             overflow-y: auto;
             white-space: pre-wrap;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);
         }
     </style>
 </head>
 <body>
 
+    <!-- Sidebar Control Panel -->
     <div class="sidebar">
-        <div class="brand">ANTIGRAVITY AI ENGINE</div>
-
-        <div>
-            <div class="section-title">1. Reference & Footage Intake</div>
-            <div class="upload-box" onclick="document.getElementById('refFile').click()">
-                <div style="font-size: 24px;">🎥</div>
-                <div style="font-size: 12px; font-weight: 600; margin-top: 6px;">Select Reference Video</div>
-                <div style="font-size: 10px; color: var(--text-muted);" id="refFileName">clip_1.mp4</div>
-                <input type="file" id="refFile" style="display:none" onchange="updateFileName(this, 'refFileName')">
-            </div>
+        <div class="brand-header">
+            <div class="brand-icon">AG</div>
+            <div class="brand-title">ANTIGRAVITY STUDIO</div>
         </div>
 
+        <!-- Preset Selection -->
         <div>
-            <div class="section-title">2. Futuristic AI Modules</div>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div class="option-toggle">
-                    <span>Optical Flow Speed Ramps</span>
-                    <input type="checkbox" checked>
+            <div class="section-label">1. Creative Edit Presets</div>
+            <div class="preset-grid">
+                <div class="preset-card active" onclick="selectPreset(this, 'masterpiece')">
+                    <div class="preset-name">Masterpiece</div>
+                    <div class="preset-desc">Full VFX & Color Grade</div>
                 </div>
-                <div class="option-toggle">
-                    <span>Depth Map Estimation</span>
-                    <input type="checkbox" checked>
+                <div class="preset-card" onclick="selectPreset(this, 'phonk')">
+                    <div class="preset-name">Phonk Rhythm</div>
+                    <div class="preset-desc">Aggressive Beat Hits</div>
                 </div>
-                <div class="option-toggle">
-                    <span>SAM 2 Subject Matting</span>
-                    <input type="checkbox" checked>
+                <div class="preset-card" onclick="selectPreset(this, 'hypnotic')">
+                    <div class="preset-name">Speed Ramp</div>
+                    <div class="preset-desc">Optical Flow Curves</div>
                 </div>
-                <div class="option-toggle">
-                    <span>After Effects 2025 Headless</span>
-                    <input type="checkbox" checked>
+                <div class="preset-card" onclick="selectPreset(this, 'custom')">
+                    <div class="preset-name">Custom AI</div>
+                    <div class="preset-desc">User Configured</div>
                 </div>
             </div>
         </div>
 
-        <button class="btn-run" onclick="startEditProcess()">START AUTOMATED EDIT</button>
+        <!-- Footage Intake -->
+        <div>
+            <div class="section-label">2. Footage & Reference Upload</div>
+            <div class="upload-dropzone" onclick="document.getElementById('fileUpload').click()">
+                <div style="font-size: 24px;">📁</div>
+                <div style="font-size: 12px; font-weight: 600; margin-top: 6px;">Click or Drag Media Here</div>
+                <div style="font-size: 10px; color: var(--text-muted);" id="uploadedFileName">clip_1.mp4 (Auto-detected)</div>
+                <input type="file" id="fileUpload" style="display:none" onchange="handleFileUpload(this)">
+            </div>
+        </div>
+
+        <!-- Real-Time Sliders -->
+        <div>
+            <div class="section-label">3. Dynamic FX Control</div>
+            <div class="slider-group">
+                <div class="slider-control">
+                    <div class="slider-label">
+                        <span>Chromatic Aberration</span>
+                        <span id="chromaVal">0.8x</span>
+                    </div>
+                    <input type="range" min="0" max="2" step="0.1" value="0.8" oninput="document.getElementById('chromaVal').innerText = this.value + 'x'">
+                </div>
+
+                <div class="slider-control">
+                    <div class="slider-label">
+                        <span>Camera Shake Impulse</span>
+                        <span id="shakeVal">1.2x</span>
+                    </div>
+                    <input type="range" min="0" max="3" step="0.1" value="1.2" oninput="document.getElementById('shakeVal').innerText = this.value + 'x'">
+                </div>
+
+                <div class="slider-control">
+                    <div class="slider-label">
+                        <span>Karaoke Caption Scale</span>
+                        <span id="captionVal">1.15x</span>
+                    </div>
+                    <input type="range" min="0.5" max="2" step="0.05" value="1.15" oninput="document.getElementById('captionVal').innerText = this.value + 'x'">
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-launch" onclick="executeMasterEdit()">GENERATE MASTER VIDEO</button>
     </div>
 
-    <div class="main-content">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <h2 style="margin: 0; font-size: 22px;">Live Video Output & AI Compositor</h2>
-            <div id="statusBadge" style="background: rgba(0,242,254,0.1); color: var(--accent-cyan); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">Engine Ready</div>
+    <!-- Main Workspace -->
+    <div class="workspace">
+        <div class="workspace-header">
+            <div>
+                <h2 style="margin: 0; font-size: 22px;">Deterministic Production Pipeline</h2>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">Remotion React + Adobe After Effects 2025 Headless Execution</div>
+            </div>
+            <div class="status-pill" id="statusPill">
+                <div class="status-dot"></div>
+                <span id="statusText">System Ready</span>
+            </div>
         </div>
 
-        <div class="preview-card">
-            <video id="videoPlayer" controls poster="https://via.placeholder.com/640x360/12161f/00f2fe?text=Antigravity+AI+Render+Preview">
+        <!-- DAG Stepper -->
+        <div class="stepper">
+            <div class="step-node active" id="step1">1. Ingestion & Hashes</div>
+            <div class="step-node" id="step2">2. Futuristic AI</div>
+            <div class="step-node" id="step3">3. Style Planner</div>
+            <div class="step-node" id="step4">4. Render Backend</div>
+            <div class="step-node" id="step5">5. QA Verification</div>
+        </div>
+
+        <!-- Player Stage -->
+        <div class="player-stage">
+            <video id="outputPlayer" controls poster="https://via.placeholder.com/640x360/0f131c/00f2fe?text=Antigravity+Master+Render+Output">
                 <source src="/out/final_render.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
 
+        <!-- Console Log Box -->
         <div>
-            <div class="section-title">Live Execution Console Log</div>
-            <div class="log-terminal" id="terminalLog">[System] Engine Initialized. Ready for 1-Click Automated Edit.</div>
+            <div class="section-label">Live Orchestrator Console</div>
+            <div class="terminal-box" id="consoleLog">[System] Antigravity SSS++ Architecture initialized. Select preset and click Generate.</div>
         </div>
     </div>
 
     <script>
-        function updateFileName(input, targetId) {
+        let currentPreset = 'masterpiece';
+
+        function selectPreset(element, presetName) {
+            document.querySelectorAll('.preset-card').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            currentPreset = presetName;
+            appendConsole(`[Preset] Selected creative preset driver: '${presetName}'`);
+        }
+
+        function handleFileUpload(input) {
             if (input.files && input.files[0]) {
-                document.getElementById(targetId).innerText = input.files[0].name;
+                document.getElementById('uploadedFileName').innerText = input.files[0].name;
+                appendConsole(`[Intake] Selected media asset: ${input.files[0].name}`);
             }
         }
 
-        function appendLog(msg) {
-            const term = document.getElementById('terminalLog');
-            term.innerText += "\n" + msg;
-            term.scrollTop = term.scrollHeight;
+        function appendConsole(msg) {
+            const consoleBox = document.getElementById('consoleLog');
+            consoleBox.innerText += "\n" + msg;
+            consoleBox.scrollTop = consoleBox.scrollHeight;
         }
 
-        async function startEditProcess() {
-            document.getElementById('statusBadge').innerText = "Processing DAG Engine...";
-            document.getElementById('statusBadge').style.color = "#fbbf24";
-            appendLog("[DAG Orchestrator] Spawning StageRunner pipeline...");
+        function setStepActive(stepNum) {
+            for (let i = 1; i <= 5; i++) {
+                const node = document.getElementById(`step${i}`);
+                if (i <= stepNum) {
+                    node.classList.add('active');
+                } else {
+                    node.classList.remove('active');
+                }
+            }
+        }
+
+        async function executeMasterEdit() {
+            const statusPill = document.getElementById('statusPill');
+            const statusText = document.getElementById('statusText');
+            
+            statusPill.style.borderColor = "#f59e0b";
+            statusPill.style.color = "#f59e0b";
+            statusText.innerText = "Executing DAG Engine...";
+
+            setStepActive(1);
+            appendConsole("[DAG Orchestrator] Triggering SSS++ Pipeline runner...");
 
             try {
-                const resp = await fetch('/api/run', { method: 'POST' });
-                const data = await resp.json();
-                
-                appendLog(data.log);
-                document.getElementById('statusBadge').innerText = "Render Complete!";
-                document.getElementById('statusBadge').style.color = "#4ade80";
+                setStepActive(2);
+                const resp = await fetch('/api/run', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ preset: currentPreset })
+                });
 
-                const player = document.getElementById('videoPlayer');
-                player.src = "/out/final_render.mp4?t=" + new Date().getTime();
-                player.play();
+                const data = await resp.json();
+                setStepActive(5);
+
+                appendConsole(data.log);
+
+                if (data.status === "SUCCESS") {
+                    statusPill.style.borderColor = "#10b981";
+                    statusPill.style.color = "#10b981";
+                    statusText.innerText = "Render Complete!";
+
+                    const player = document.getElementById('outputPlayer');
+                    player.src = "/out/final_render.mp4?t=" + new Date().getTime();
+                    player.play();
+                } else {
+                    throw new Error("Render pipeline returned error status.");
+                }
             } catch (err) {
-                appendLog("[Error] Failed to execute pipeline: " + err);
-                document.getElementById('statusBadge').innerText = "Execution Error";
-                document.getElementById('statusBadge').style.color = "#f87171";
+                appendConsole("[Error] Execution failed: " + err.message);
+                statusPill.style.borderColor = "#ef4444";
+                statusPill.style.color = "#ef4444";
+                statusText.innerText = "Execution Error";
             }
         }
     </script>

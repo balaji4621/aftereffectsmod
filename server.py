@@ -21,13 +21,22 @@ class AntigravityServer(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         if self.path == "/api/run":
+            content_length = int(self.headers.get('Content-Length', 0))
+            post_data = self.rfile.read(content_length) if content_length > 0 else b'{}'
+            try:
+                payload = json.loads(post_data.decode('utf-8'))
+            except Exception:
+                payload = {}
+
+            preset_name = payload.get("preset", "masterpiece")
+
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
 
             log_output = []
             try:
-                log_output.append("[Pipeline] Triggering master SSS++ engine execution...")
+                log_output.append(f"[Pipeline] Triggering master SSS++ engine with preset: '{preset_name}'...")
                 cmd = [sys.executable, os.path.join(PROJECT_DIR, "run_sss_pipeline.py")]
                 res = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
                 
@@ -37,6 +46,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
 
                 response = {
                     "status": "SUCCESS" if res.returncode == 0 else "ERROR",
+                    "preset": preset_name,
                     "log": "\n".join(log_output)
                 }
             except subprocess.TimeoutExpired:
