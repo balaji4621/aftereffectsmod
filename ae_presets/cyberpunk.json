@@ -1,0 +1,20 @@
+{
+  "presetName": "cyberpunk",
+  "version": "1.0.0",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "transitionDuration": 0.25,
+  "bezierVector": [0.87, 0.0, 0.13, 1.0],
+  "glow": {
+    "enabled": true,
+    "threshold": 15,
+    "radius": 110,
+    "intensity": 1.6
+  },
+  "colorBalance": {
+    "enabled": true,
+    "brightness": 15,
+    "contrast": 55
+  }
+}
