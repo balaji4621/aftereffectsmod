@@ -1,0 +1,20 @@
+{
+  "presetName": "vhs_retro",
+  "version": "1.0.0",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "transitionDuration": 0.4,
+  "bezierVector": [0.42, 0.0, 0.58, 1.0],
+  "glow": {
+    "enabled": true,
+    "threshold": 50,
+    "radius": 40,
+    "intensity": 0.7
+  },
+  "colorBalance": {
+    "enabled": true,
+    "brightness": 5,
+    "contrast": 25
+  }
+}
