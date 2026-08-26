@@ -1,0 +1,20 @@
+{
+  "presetName": "glitch_neon",
+  "version": "1.0.0",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "transitionDuration": 0.1,
+  "bezierVector": [0.87, 0.0, 0.13, 1.0],
+  "glow": {
+    "enabled": true,
+    "threshold": 10,
+    "radius": 130,
+    "intensity": 2.0
+  },
+  "colorBalance": {
+    "enabled": true,
+    "brightness": 20,
+    "contrast": 60
+  }
+}
