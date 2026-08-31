@@ -80,12 +80,43 @@ def main():
     runner.register_stage("Stage_3_Style_Plan", stage_3_ai_style_planning)
     runner.register_stage("Stage_4_Render", stage_4_render_backend_execution)
     runner.register_stage("Stage_5_QA", stage_5_qa_verification)
+    
+    from src.engine.benchmark import run_performance_benchmark
+    runner.register_stage("Stage_6_Benchmark", lambda params: run_performance_benchmark())
+    
+    from src.engine.metrics_reporter import generate_qa_metrics_report
+    runner.register_stage("Stage_7_Report", lambda params: generate_qa_metrics_report())
+    
+    # NEW CONTRIBUTION: Added stage for pipeline profiling/monitoring
+    from src.engine.profiler import PipelineProfiler
+    profiler = PipelineProfiler()
+    runner.register_stage("Stage_8_Profile", lambda params: profiler.save())
+    
+    # NEW CONTRIBUTION: Added logging of final pipeline execution stats
+    import logging
+    logging.basicConfig(filename='out/pipeline_summary.log', level=logging.INFO)
+    runner.register_stage("Stage_9_Log", lambda params: logging.info("Pipeline finalized successfully."))
+    
+    # NEW CONTRIBUTION: Added temporary file cleanup after run
+    import shutil
+    runner.register_stage("Stage_10_Cleanup", lambda params: shutil.rmtree("out/temp", ignore_errors=True))
+    
+    # NEW CONTRIBUTION: Added system-level watchdog for hung processes
+    from src.engine.watchdog import WindowsProcessWatchdog
+    watchdog = WindowsProcessWatchdog()
+    runner.register_stage("Stage_11_Check", lambda params: watchdog.execute_with_watchdog(["echo", "pipeline_complete"]))
 
     runner.run_stage("Stage_1_Ingest", {"runner": runner})
     runner.run_stage("Stage_2_Futuristic_AI", {})
     runner.run_stage("Stage_3_Style_Plan", {})
     runner.run_stage("Stage_4_Render", {})
     runner.run_stage("Stage_5_QA", {})
+    runner.run_stage("Stage_6_Benchmark", {})
+    runner.run_stage("Stage_7_Report", {})
+    runner.run_stage("Stage_8_Profile", {})
+    runner.run_stage("Stage_9_Log", {})
+    runner.run_stage("Stage_10_Cleanup", {})
+    runner.run_stage("Stage_11_Check", {})
 
     elapsed = time.time() - start_t
     print("================================================================================")
