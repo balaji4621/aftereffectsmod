@@ -7,11 +7,14 @@
     "build": "remotion bundle src/index.ts",
     "ingest": "node scripts/discover-assets.mjs && node scripts/analyze-audio.mjs && node scripts/extract-subtitles.mjs",
     "render:remotion": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --gl=angle",
-    "render:ae": "powershell -Command \"Start-Process -FilePath 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/AfterFX.exe' -ArgumentList '-r', 'C:/Users/ADMIN/OneDrive/Desktop/ae/build_ae_master.jsx' -Wait; & 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/aerender.exe' -project 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/antigravity_master_build.aep' -comp 'MASTERPIECE_COMP' -output 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/final_render_ae.mp4'\"",
+    "render:ae": "powershell -Command \"Start-Process -FilePath 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/AfterFX.exe' -ArgumentList '-r', 'C:/Users/ADMIN/OneDrive/Desktop/ae/build_ae_master.jsx' -Wait; & 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/aerender.exe' -project 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/antigravity_master_build.aep' -comp 'MASTERPIECE_COMP' -output 'C:/Users/ADMIN\OneDrive\Desktop\ae\out\final_render_ae.mp4'\"",
     "render": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --gl=angle",
     "render:fast": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --scale=0.5 --gl=angle",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/**/*.ts src/**/*.tsx --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -32,15 +35,20 @@
   },
   "devDependencies": {
     "@remotion/cli": "^4.0.0",
+    "@types/jest": "^29.0.0",
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.0.0",
     "eslint-plugin-react": "^7.0.0",
     "eslint-plugin-react-hooks": "^4.0.0",
     "husky": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
     "typescript": "^5.5.0"
   }
 }
