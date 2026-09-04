@@ -316,9 +316,20 @@
             </div>
         </div>
 
+        <!-- LUT Upload -->
+        <div>
+            <div class="section-label">3. Custom LUT Upload</div>
+            <div class="upload-dropzone" onclick="document.getElementById('lutUpload').click()">
+                <div style="font-size: 24px;">🎨</div>
+                <div style="font-size: 12px; font-weight: 600; margin-top: 6px;">Upload Custom LUT (.cube)</div>
+                <div style="font-size: 10px; color: var(--text-muted);" id="lutFileName">No LUT selected</div>
+                <input type="file" id="lutUpload" style="display:none" accept=".cube" onchange="handleLUTUpload(this)">
+            </div>
+        </div>
+
         <!-- Real-Time Sliders -->
         <div>
-            <div class="section-label">3. Dynamic FX Control</div>
+            <div class="section-label">4. Dynamic FX Control</div>
             <div class="slider-group">
                 <div class="slider-control">
                     <div class="slider-label">
@@ -387,6 +398,7 @@
 
     <script>
         let currentPreset = 'masterpiece';
+        let lutFile = null;
 
         function selectPreset(element, presetName) {
             document.querySelectorAll('.preset-card').forEach(el => el.classList.remove('active'));
@@ -399,6 +411,18 @@
             if (input.files && input.files[0]) {
                 document.getElementById('uploadedFileName').innerText = input.files[0].name;
                 appendConsole(`[Intake] Selected media asset: ${input.files[0].name}`);
+            }
+        }
+
+        function handleLUTUpload(input) {
+            if (input.files && input.files[0]) {
+                lutFile = input.files[0];
+                document.getElementById('lutFileName').innerText = lutFile.name;
+                appendConsole(`[LUT] Selected custom LUT: ${lutFile.name}`);
+            } else {
+                lutFile = null;
+                document.getElementById('lutFileName').innerText = "No LUT selected";
+                appendConsole(`[LUT] LUT selection cleared`);
             }
         }
 
@@ -432,10 +456,15 @@
 
             try {
                 setStepActive(2);
+                const formData = new FormData();
+                formData.append('preset', currentPreset);
+                if (lutFile) {
+                    formData.append('lut', lutFile);
+                }
+
                 const resp = await fetch('/api/run', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ preset: currentPreset })
+                    body: formData
                 });
 
                 const data = await resp.json();
