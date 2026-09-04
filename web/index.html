@@ -16,6 +16,9 @@
             --accent-yellow: #f59e0b;
             --text-primary: #f8fafc;
             --text-muted: #64748b;
+            --status-healthy: #10b981;
+            --status-warning: #f59e0b;
+            --status-error: #ef4444;
         }
 
         * {
@@ -193,6 +196,40 @@
             transform: translateY(-1px);
         }
 
+        .health-status {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .health-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .health-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent-cyan);
+            margin-bottom: 6px;
+        }
+
+        .health-value {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .health-label {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
         /* Main Workspace Area */
         .workspace {
             flex: 1;
@@ -352,9 +389,41 @@
             <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px;" id="exportStatus">Ready to export</div>
         </div>
 
+        <!-- System Health -->
+        <div>
+            <div class="section-label">5. System Health</div>
+            <div id="healthStatus" class="health-status">
+                <div class="health-card">
+                    <div class="health-title">CPU Usage</div>
+                    <div class="health-value" id="cpuUsage">--%</div>
+                    <div class="health-label">Usage</div>
+                </div>
+                <div class="health-card">
+                    <div class="health-title">Memory</div>
+                    <div class="health-value" id="memoryUsage">--%</div>
+                    <div class="health-label">Usage</div>
+                </div>
+                <div class="health-card">
+                    <div class="health-title">Disk</div>
+                    <div class="health-value" id="diskUsage">--%</div>
+                    <div class="health-label">Usage</div>
+                </div>
+                <div class="health-card">
+                    <div class="health-title">FFmpeg</div>
+                    <div class="health-value" id="ffmpegStatus">--</div>
+                    <div class="health-label">Available</div>
+                </div>
+                <div class="health-card">
+                    <div class="health-title">After Effects</div>
+                    <div class="health-value" id="aeStatus">--</div>
+                    <div class="health-label">Available</div>
+                </div>
+            </div>
+        </div>
+
         <!-- Real-Time Sliders -->
         <div>
-            <div class="section-label">5. Dynamic FX Control</div>
+            <div class="section-label">6. Dynamic FX Control</div>
             <div class="slider-group">
                 <div class="slider-control">
                     <div class="slider-label">
@@ -404,7 +473,7 @@
         <div class="stepper">
             <div class="step-node active" id="step1">1. Ingestion & Hashes</div>
             <div class="step-node" id="step2">2. Futuristic AI</div>
-            <div class="step-node" id="step3">3. Style Planner</div>
+            <div class="step-node" id="step3">3. Style Planner</div
             <div class="step-node" id="step4">4. Render Backend</div>
             <div class="step-node" id="step5">5. QA Verification</div>
         </div>
@@ -426,6 +495,7 @@
     <script>
         let currentPreset = 'masterpiece';
         let lutFile = null;
+        let healthCheckInterval = null;
 
         function selectPreset(element, presetName) {
             document.querySelectorAll('.preset-card').forEach(el => el.classList.remove('active'));
@@ -521,6 +591,86 @@
             }
         }
 
+        async function updateHealthStatus() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                
+                if (data.status === "SUCCESS") {
+                    // Update CPU usage
+                    const cpuUsageEl = document.getElementById('cpuUsage');
+                    cpuUsageEl.textContent = `${data.system.cpu_usage_percent.toFixed(1)}%`;
+                    cpuUsageEl.style.color = getStatusColor(data.system.cpu_usage_percent, 80, 95);
+                    
+                    // Update Memory usage
+                    const memoryUsageEl = document.getElementById('memoryUsage');
+                    memoryUsageEl.textContent = `${data.system.memory.used_percent.toFixed(1)}%`;
+                    memoryUsageEl.style.color = getStatusColor(data.system.memory.used_percent, 80, 95);
+                    
+                    // Update Disk usage
+                    const diskUsageEl = document.getElementById('diskUsage');
+                    diskUsageEl.textContent = `${data.system.disk.used_percent.toFixed(1)}%`;
+                    diskUsageEl.style.color = getStatusColor(data.system.disk.used_percent, 80, 95);
+                    
+                    // Update FFmpeg status
+                    const ffmpegStatusEl = document.getElementById('ffmpegStatus');
+                    ffmpegStatusEl.textContent = data.dependencies.ffmpeg_available ? '✓ Yes' : '✗ No';
+                    ffmpegStatusEl.style.color = data.dependencies.ffmpeg_available ? 
+                        'var(--status-healthy)' : 'var(--status-error)';
+                    
+                    // Update After Effects status
+                    const aeStatusEl = document.getElementById('aeStatus');
+                    aeStatusEl.textContent = data.dependencies.after_effects_available ? '✓ Yes' : '✗ No';
+                    aeStatusEl.style.color = data.dependencies.after_effects_available ? 
+                        'var(--status-healthy)' : 'var(--status-error)';
+                } else {
+                    throw new Error(data.message || "Health check failed");
+                }
+            } catch (err) {
+                console.error('Health check failed:', err);
+                // Set all statuses to error state
+                document.getElementById('cpuUsage').textContent = 'ERR';
+                document.getElementById('memoryUsage').textContent = 'ERR';
+                document.getElementById('diskUsage').textContent = 'ERR';
+                document.getElementById('ffmpegStatus').textContent = 'ERR';
+                document.getElementById('aeStatus').textContent = 'ERR';
+                
+                const errorColor = 'var(--status-error)';
+                document.getElementById('cpuUsage').style.color = errorColor;
+                document.getElementById('memoryUsage').style.color = errorColor;
+                document.getElementById('diskUsage').style.color = errorColor;
+                document.getElementById('ffmpegStatus').style.color = errorColor;
+                document.getElementById('aeStatus').style.color = errorColor;
+            }
+        }
+
+        function getStatusColor(value, warningThreshold, errorThreshold) {
+            if (value >= errorThreshold) {
+                return 'var(--status-error)';
+            } else if (value >= warningThreshold) {
+                return 'var(--status-warning)';
+            } else {
+                return 'var(--status-healthy)';
+            }
+        }
+
+        function appendConsole(msg) {
+            const consoleBox = document.getElementById('consoleLog');
+            consoleBox.innerText += "\n" + msg;
+            consoleBox.scrollTop = consoleBox.scrollHeight;
+        }
+
+        function setStepActive(stepNum) {
+            for (let i = 1; i <= 5; i++) {
+                const node = document.getElementById(`step${i}`);
+                if (i <= stepNum) {
+                    node.classList.add('active');
+                } else {
+                    node.classList.remove('active');
+                }
+            }
+        }
+
         async function executeMasterEdit() {
             const statusPill = document.getElementById('statusPill');
             const statusText = document.getElementById('statusText');
@@ -568,6 +718,22 @@
                 statusText.innerText = "Execution Error";
             }
         }
+
+        // Start health check updates when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial health check
+            updateHealthStatus();
+            
+            // Set up periodic health checks (every 5 seconds)
+            healthCheckInterval = setInterval(updateHealthStatus, 5000);
+        });
+
+        // Clean up interval when page is unloaded
+        window.addEventListener('beforeunload', () => {
+            if (healthCheckInterval) {
+                clearInterval(healthCheckInterval);
+            }
+        });
     </script>
 </body>
 </html>

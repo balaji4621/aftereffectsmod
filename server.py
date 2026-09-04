@@ -10,6 +10,8 @@ import sys
 import json
 import subprocess
 import socketserver
+import shutil
+import psutil
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import urllib.parse
 
@@ -69,9 +71,12 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         
         Endpoints:
         - GET /api/presets: Get list of available presets
+        - GET /api/health: Get system health status
         """
         if self.path == "/api/presets":
             self._handle_get_presets()
+        elif self.path == "/api/health":
+            self._handle_health_check()
         else:
             # Serve static files
             super().do_GET()
@@ -238,6 +243,84 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         
         self.wfile.write(json.dumps(response).encode('utf-8'))
 
+    def _handle_health_check(self):
+        """Handle GET /api/health - Get system health status."""
+        try:
+            # Get system information
+            cpu_percent = psutil.cpu_percent(interval=1)
+            memory = psutil.virtual_memory()
+            disk = psutil.disk_usage('/')
+            
+            # Check if output directory exists and get its size
+            out_dir = os.path.join(PROJECT_DIR, "out")
+            out_dir_size = 0
+            out_dir_file_count = 0
+            if os.path.exists(out_dir):
+                for root, dirs, files in os.walk(out_dir):
+                    out_dir_file_count += len(files)
+                    for file in files:
+                        file_path = os.path.join(root, file)
+                        if os.path.isfile(file_path):
+                            out_dir_size += os.path.getsize(file_path)
+            
+            # Check if FFmpeg is available
+            ffmpeg_available = False
+            try:
+                res = subprocess.run(["ffmpeg", "-version"], capture_output=True, text=True, timeout=5)
+                if res.returncode == 0:
+                    ffmpeg_available = True
+            except Exception:
+                ffmpeg_available = False
+            
+            # Check if After Effects is available (Windows only)
+            ae_available = False
+            if sys.platform == "win32":
+                ae_exe = r"C:\Program Files\Adobe\Adobe After Effects 2025\Support Files\AfterFX.exe"
+                ae_available = os.path.exists(ae_exe)
+            
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            
+            response = {
+                "status": "SUCCESS",
+                "system": {
+                    "cpu_usage_percent": cpu_percent,
+                    "memory": {
+                        "total_gb": round(memory.total / (1024**3), 2),
+                        "available_gb": round(memory.available / (1024**3), 2),
+                        "used_percent": memory.percent
+                    },
+                    "disk": {
+                        "total_gb": round(disk.total / (1024**3), 2),
+                        "free_gb": round(disk.free / (1024**3), 2),
+                        "used_percent": round((disk.used / disk.total) * 100, 2)
+                    }
+                },
+                "storage": {
+                    "out_dir_size_mb": round(out_dir_size / (1024**2), 2),
+                    "out_dir_file_count": out_dir_file_count
+                },
+                "dependencies": {
+                    "ffmpeg_available": ffmpeg_available,
+                    "after_effects_available": ae_available
+                },
+                "timestamp": time.time()
+            }
+            
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+        except Exception as e:
+            self.send_response(500)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            
+            response = {
+                "status": "ERROR",
+                "message": f"Health check failed: {str(e)}"
+            }
+            
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+
     def _handle_stop(self):
         """Handle POST /api/stop - Shutdown the server."""
         self.send_response(200)
@@ -300,6 +383,7 @@ def main():
     print(f"    POST /api/upload-lut - Upload custom LUT file")
     print(f"    POST /api/export-preset - Export current settings as preset")
     print(f"    GET /api/presets - Get list of available presets")
+    print(f"    GET /api/health - Get system health status")
     print(f"    POST /api/stop - Shutdown server")
     print(f"============================================================================================")
     
