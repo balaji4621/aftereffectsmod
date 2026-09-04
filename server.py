@@ -49,6 +49,8 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         Endpoints:
         - POST /api/run: Trigger the video production pipeline
         - POST /api/stop: Shutdown the server
+        - POST /api/upload-lut: Upload custom LUT file
+        - POST /api/export-preset: Export current settings as preset
         """
         if self.path == "/api/run":
             self._handle_run_pipeline()
@@ -56,8 +58,23 @@ class AntigravityServer(SimpleHTTPRequestHandler):
             self._handle_stop()
         elif self.path == "/api/upload-lut":
             self._handle_lut_upload()
+        elif self.path == "/api/export-preset":
+            self._handle_export_preset()
         else:
             self.send_error(404, "Endpoint not found")
+
+    def do_GET(self):
+        """
+        Handle GET requests to API endpoints.
+        
+        Endpoints:
+        - GET /api/presets: Get list of available presets
+        """
+        if self.path == "/api/presets":
+            self._handle_get_presets()
+        else:
+            # Serve static files
+            super().do_GET()
 
     def _handle_run_pipeline(self):
         """Handle POST /api/run - Trigger the video production pipeline."""
@@ -65,8 +82,6 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         if content_type.startswith('multipart/form-data'):
             # Handle file upload
             length = int(self.headers.get('Content-Length', 0))
-            # For simplicity, we'll read the raw data and parse it later
-            # In a production app, you'd use a proper multipart parser
             post_data = self.rfile.read(length)
             # For now, we'll just extract the preset from form data
             # A full multipart parser would be needed for file handling
@@ -155,6 +170,74 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         
         self.wfile.write(json.dumps(response).encode('utf-8'))
 
+    def _handle_export_preset(self):
+        """Handle POST /api/export-preset - Export current settings as preset."""
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length) if content_length > 0 else b'{}'
+        
+        try:
+            payload = json.loads(post_data.decode('utf-8'))
+        except json.JSONDecodeError:
+            payload = {}
+
+        preset_name = payload.get("name", "custom_preset")
+        settings = payload.get("settings", {})
+        
+        # Create presets directory if it doesn't exist
+        presets_dir = os.path.join(PROJECT_DIR, "ae_presets")
+        os.makedirs(presets_dir, exist_ok=True)
+        
+        # Save preset as JSON file
+        preset_file = os.path.join(presets_dir, f"{preset_name}.json")
+        try:
+            with open(preset_file, 'w') as f:
+                json.dump(settings, f, indent=2)
+            
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            
+            response = {
+                "status": "SUCCESS",
+                "message": f"Preset '{preset_name}' exported successfully",
+                "preset_file": preset_file
+            }
+            
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+        except Exception as e:
+            self.send_response(500)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            
+            response = {
+                "status": "ERROR",
+                "message": f"Failed to export preset: {str(e)}"
+            }
+            
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+
+    def _handle_get_presets(self):
+        """Handle GET /api/presets - Get list of available presets."""
+        presets_dir = os.path.join(PROJECT_DIR, "ae_presets")
+        presets = []
+        
+        if os.path.exists(presets_dir):
+            for file in os.listdir(presets_dir):
+                if file.endswith(".json"):
+                    preset_name = file[:-5]  # Remove .json extension
+                    presets.append(preset_name)
+        
+        self.send_response(200)
+        self.send_header("Content-type", "application/json")
+        self.end_headers()
+        
+        response = {
+            "status": "SUCCESS",
+            "presets": presets
+        }
+        
+        self.wfile.write(json.dumps(response).encode('utf-8'))
+
     def _handle_stop(self):
         """Handle POST /api/stop - Shutdown the server."""
         self.send_response(200)
@@ -215,6 +298,8 @@ def main():
     print(f"  API Endpoints:")
     print(f"    POST /api/run - Trigger video production pipeline")
     print(f"    POST /api/upload-lut - Upload custom LUT file")
+    print(f"    POST /api/export-preset - Export current settings as preset")
+    print(f"    GET /api/presets - Get list of available presets")
     print(f"    POST /api/stop - Shutdown server")
     print(f"============================================================================================")
     

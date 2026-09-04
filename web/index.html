@@ -175,6 +175,24 @@
             box-shadow: 0 6px 30px rgba(0, 242, 254, 0.5);
         }
 
+        .btn-secondary {
+            margin-top: 8px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 242, 254, 0.1);
+            transform: translateY(-1px);
+        }
+
         /* Main Workspace Area */
         .workspace {
             flex: 1;
@@ -327,9 +345,16 @@
             </div>
         </div>
 
+        <!-- Preset Management -->
+        <div>
+            <div class="section-label">4. Preset Management</div>
+            <button class="btn-secondary" onclick="exportCurrentPreset()">Export Current Settings</button>
+            <div style="font-size: 10px; color: var(--text-muted); margin-top: 4px;" id="exportStatus">Ready to export</div>
+        </div>
+
         <!-- Real-Time Sliders -->
         <div>
-            <div class="section-label">4. Dynamic FX Control</div>
+            <div class="section-label">5. Dynamic FX Control</div>
             <div class="slider-group">
                 <div class="slider-control">
                     <div class="slider-label">
@@ -357,7 +382,9 @@
             </div>
         </div>
 
-        <button class="btn-launch" onclick="executeMasterEdit()">GENERATE MASTER VIDEO</button>
+        <div style="margin-top: auto;">
+            <button class="btn-launch" onclick="executeMasterEdit()">GENERATE MASTER VIDEO</button>
+        </div>
     </div>
 
     <!-- Main Workspace -->
@@ -405,6 +432,7 @@
             element.classList.add('active');
             currentPreset = presetName;
             appendConsole(`[Preset] Selected creative preset driver: '${presetName}'`);
+            document.getElementById('exportStatus').textContent = `Ready to export ${presetName} preset`;
         }
 
         function handleFileUpload(input) {
@@ -440,6 +468,56 @@
                 } else {
                     node.classList.remove('active');
                 }
+            }
+        }
+
+        async function exportCurrentPreset() {
+            const exportStatus = document.getElementById('exportStatus');
+            exportStatus.textContent = "Exporting preset...";
+            
+            try {
+                // Get current slider values
+                const settings = {
+                    preset: currentPreset,
+                    chromaticAberration: parseFloat(document.getElementById('chromaVal').textContent),
+                    cameraShakeImpulse: parseFloat(document.getElementById('shakeVal').textContent),
+                    karaokeCaptionScale: parseFloat(document.getElementById('captionVal').textContent),
+                    lutFile: lutFile ? lutFile.name : null,
+                    timestamp: new Date().toISOString()
+                };
+                
+                const response = await fetch('/api/export-preset', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: `custom_${currentPreset}_${Date.now()}`,
+                        settings: settings
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === "SUCCESS") {
+                    exportStatus.textContent = `Preset exported: ${data.preset_file}`;
+                    appendConsole(`[Preset] Exported custom preset: ${data.preset_file}`);
+                    
+                    // Reset status after 3 seconds
+                    setTimeout(() => {
+                        exportStatus.textContent = "Ready to export";
+                    }, 3000);
+                } else {
+                    throw new Error(data.message || "Export failed");
+                }
+            } catch (err) {
+                exportStatus.textContent = `Export failed: ${err.message}`;
+                appendConsole(`[Error] Preset export failed: ${err.message}`);
+                
+                // Reset status after 3 seconds
+                setTimeout(() => {
+                    exportStatus.textContent = "Ready to export";
+                }, 3000);
             }
         }
 
