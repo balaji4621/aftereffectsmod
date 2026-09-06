@@ -1,0 +1,22 @@
+# Core Dependencies
+numpy>=1.24.0
+opencv-python>=4.8.0
+opencv-python-headless>=4.8.0
+librosa>=0.10.0
+psutil>=5.9.0
+scipy>=1.11.0
+scikit-image>=0.21.0
+ffmpeg-python>=0.2.0
+
+# AI/ML Libraries (Optional - installed on demand)
+transformers>=4.30.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Development Dependencies
+pytest>=7.4.0
+pytest-timeout>=2.2.0
+coverage>=7.3.0
+
+# Server
+requests>=2.31.0
