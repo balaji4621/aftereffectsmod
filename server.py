@@ -12,12 +12,66 @@ import subprocess
 import socketserver
 import shutil
 import psutil
+import time
+import threading
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import urllib.parse
+from collections import defaultdict
+from functools import wraps
 
 # Configuration
 PORT = 8000
 PROJECT_DIR = r"C:\Users\ADMIN\OneDrive\Desktop\ae"
+
+
+class RateLimiter:
+    """Simple in-memory rate limiter with sliding window."""
+    
+    def __init__(self, max_requests: int = 60, window_seconds: int = 60):
+        self.max_requests = max_requests
+        self.window_seconds = window_seconds
+        self.requests = defaultdict(list)
+        self.lock = threading.Lock()
+    
+    def is_allowed(self, client_ip: str) -> tuple:
+        """
+        Check if a request from client_ip is allowed.
+        
+        Returns:
+            tuple: (allowed: bool, retry_after: int)
+        """
+        with self.lock:
+            now = time.time()
+            window_start = now - self.window_seconds
+            
+            # Clean old requests
+            self.requests[client_ip] = [
+                req_time for req_time in self.requests[client_ip] 
+                if req_time > window_start
+            ]
+            
+            if len(self.requests[client_ip]) >= self.max_requests:
+                oldest = min(self.requests[client_ip]) if self.requests[client_ip] else now
+                retry_after = int(oldest + self.window_seconds - now) + 1
+                return False, retry_after
+            
+            self.requests[client_ip].append(now)
+            return True, 0
+    
+    def get_remaining(self, client_ip: str) -> int:
+        """Get remaining requests for a client."""
+        with self.lock:
+            now = time.time()
+            window_start = now - self.window_seconds
+            current = len([
+                req_time for req_time in self.requests[client_ip] 
+                if req_time > window_start
+            ])
+            return max(0, self.max_requests - current)
+
+
+# Global rate limiter instance
+rate_limiter = RateLimiter(max_requests=60, window_seconds=60)
 
 
 class ReusableHTTPServer(socketserver.TCPServer):
@@ -43,6 +97,48 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         if path.startswith("/out/"):
             return os.path.join(PROJECT_DIR, path.lstrip("/"))
         return os.path.join(PROJECT_DIR, path.lstrip("/"))
+    
+    def get_client_ip(self) -> str:
+        """Extract client IP address from request."""
+        # Check for forwarded headers (proxy/load balancer)
+        forwarded = self.headers.get('X-Forwarded-For')
+        if forwarded:
+            return forwarded.split(',')[0].strip()
+        
+        real_ip = self.headers.get('X-Real-IP')
+        if real_ip:
+            return real_ip
+        
+        # Fallback to client address
+        return self.client_address[0]
+    
+    def check_rate_limit(self) -> bool:
+        """Check and enforce rate limiting."""
+        client_ip = self.get_client_ip()
+        allowed, retry_after = rate_limiter.is_allowed(client_ip)
+        
+        # Add rate limit headers
+        remaining = rate_limiter.get_remaining(client_ip)
+        self.send_header('X-RateLimit-Limit', '60')
+        self.send_header('X-RateLimit-Remaining', str(remaining))
+        self.send_header('X-RateLimit-Reset', str(int(time.time()) + 60))
+        
+        if not allowed:
+            self.send_response(429)
+            self.send_header('Retry-After', str(retry_after))
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            
+            response = {
+                "status": "ERROR",
+                "error": "Rate limit exceeded",
+                "message": f"Too many requests. Try again in {retry_after} seconds.",
+                "retry_after": retry_after
+            }
+            self.wfile.write(json.dumps(response).encode('utf-8'))
+            return False
+        
+        return True
 
     def do_POST(self):
         """
@@ -54,6 +150,9 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         - POST /api/upload-lut: Upload custom LUT file
         - POST /api/export-preset: Export current settings as preset
         """
+        if not self.check_rate_limit():
+            return
+            
         if self.path == "/api/run":
             self._handle_run_pipeline()
         elif self.path == "/api/stop":
@@ -73,6 +172,9 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         - GET /api/presets: Get list of available presets
         - GET /api/health: Get system health status
         """
+        if not self.check_rate_limit():
+            return
+            
         if self.path == "/api/presets":
             self._handle_get_presets()
         elif self.path == "/api/health":
@@ -112,7 +214,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
             # Handle JSON data
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length) if content_length > 0 else b'{}'
-            
+
             try:
                 payload = json.loads(post_data.decode('utf-8'))
             except json.JSONDecodeError:
@@ -132,7 +234,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
                 log_output.append(f"[Pipeline] Using custom LUT: {lut_file.filename}")
             cmd = [sys.executable, os.path.join(PROJECT_DIR, "run_sss_pipeline.py")]
             res = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-            
+
             log_output.append(res.stdout)
             if res.stderr:
                 log_output.append(res.stderr)
@@ -161,25 +263,25 @@ class AntigravityServer(SimpleHTTPRequestHandler):
         if not content_type.startswith('multipart/form-data'):
             self.send_error(400, "Expected multipart/form-data")
             return
-            
+
         # For simplicity in this example, we'll acknowledge the upload
         # In a real implementation, you would parse the multipart data and save the file
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        
+
         response = {
             "status": "SUCCESS",
             "message": "LUT upload endpoint ready (file parsing would be implemented here)"
         }
-        
+
         self.wfile.write(json.dumps(response).encode('utf-8'))
 
     def _handle_export_preset(self):
         """Handle POST /api/export-preset - Export current settings as preset."""
         content_length = int(self.headers.get('Content-Length', 0))
         post_data = self.rfile.read(content_length) if content_length > 0 else b'{}'
-        
+
         try:
             payload = json.loads(post_data.decode('utf-8'))
         except json.JSONDecodeError:
@@ -187,60 +289,60 @@ class AntigravityServer(SimpleHTTPRequestHandler):
 
         preset_name = payload.get("name", "custom_preset")
         settings = payload.get("settings", {})
-        
+
         # Create presets directory if it doesn't exist
         presets_dir = os.path.join(PROJECT_DIR, "ae_presets")
         os.makedirs(presets_dir, exist_ok=True)
-        
+
         # Save preset as JSON file
         preset_file = os.path.join(presets_dir, f"{preset_name}.json")
         try:
             with open(preset_file, 'w') as f:
                 json.dump(settings, f, indent=2)
-            
+
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            
+
             response = {
                 "status": "SUCCESS",
                 "message": f"Preset '{preset_name}' exported successfully",
                 "preset_file": preset_file
             }
-            
+
             self.wfile.write(json.dumps(response).encode('utf-8'))
         except Exception as e:
             self.send_response(500)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            
+
             response = {
                 "status": "ERROR",
                 "message": f"Failed to export preset: {str(e)}"
             }
-            
+
             self.wfile.write(json.dumps(response).encode('utf-8'))
 
     def _handle_get_presets(self):
         """Handle GET /api/presets - Get list of available presets."""
         presets_dir = os.path.join(PROJECT_DIR, "ae_presets")
         presets = []
-        
+
         if os.path.exists(presets_dir):
             for file in os.listdir(presets_dir):
                 if file.endswith(".json"):
                     preset_name = file[:-5]  # Remove .json extension
                     presets.append(preset_name)
-        
+
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        
+
         response = {
             "status": "SUCCESS",
             "presets": presets
         }
-        
+
         self.wfile.write(json.dumps(response).encode('utf-8'))
 
     def _handle_health_check(self):
@@ -250,7 +352,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
             cpu_percent = psutil.cpu_percent(interval=1)
             memory = psutil.virtual_memory()
             disk = psutil.disk_usage('/')
-            
+
             # Check if output directory exists and get its size
             out_dir = os.path.join(PROJECT_DIR, "out")
             out_dir_size = 0
@@ -262,7 +364,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
                         file_path = os.path.join(root, file)
                         if os.path.isfile(file_path):
                             out_dir_size += os.path.getsize(file_path)
-            
+
             # Check if FFmpeg is available
             ffmpeg_available = False
             try:
@@ -271,17 +373,17 @@ class AntigravityServer(SimpleHTTPRequestHandler):
                     ffmpeg_available = True
             except Exception:
                 ffmpeg_available = False
-            
+
             # Check if After Effects is available (Windows only)
             ae_available = False
             if sys.platform == "win32":
                 ae_exe = r"C:\Program Files\Adobe\Adobe After Effects 2025\Support Files\AfterFX.exe"
                 ae_available = os.path.exists(ae_exe)
-            
+
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            
+
             response = {
                 "status": "SUCCESS",
                 "system": {
@@ -307,18 +409,18 @@ class AntigravityServer(SimpleHTTPRequestHandler):
                 },
                 "timestamp": time.time()
             }
-            
+
             self.wfile.write(json.dumps(response).encode('utf-8'))
         except Exception as e:
             self.send_response(500)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            
+
             response = {
                 "status": "ERROR",
                 "message": f"Health check failed: {str(e)}"
             }
-            
+
             self.wfile.write(json.dumps(response).encode('utf-8'))
 
     def _handle_stop(self):
@@ -338,7 +440,7 @@ class AntigravityServer(SimpleHTTPRequestHandler):
 def clean_previous_renders():
     """
     Clean up previous render files from the output directory.
-    
+
     Removes video files to prevent confusion between old and new renders.
     """
     out_dir = os.path.join(PROJECT_DIR, "out")
@@ -374,7 +476,7 @@ def main():
     server_address = ('', PORT)
     httpd = HTTPServer(server_address, AntigravityServer)
     httpd.allow_reuse_address = True
-    
+
     print(f"============================================================================================")
     print(f"  ANTIGRAVITY AI VIDEO ENGINE LOCAL WEB APP DASHBOARD RUNNING")
     print(f"  Open in Browser: http://localhost:{PORT}")
@@ -386,7 +488,7 @@ def main():
     print(f"    GET /api/health - Get system health status")
     print(f"    POST /api/stop - Shutdown server")
     print(f"============================================================================================")
-    
+
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
