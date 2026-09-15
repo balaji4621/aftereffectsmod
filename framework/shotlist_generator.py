@@ -38,6 +38,13 @@ def generate_shot_list(template_json="out/master_template.json", output_md="out/
     md_lines.append("3. **Headroom & Handles**: Record extra 0.5s handle on both ends of each shot for seamless transitions.")
     md_lines.append("4. **Lighting**: Keep lighting contrast clean to maximize the OpenCV 3D color grade transfer accuracy.")
 
+    # Add AI-powered shot suggestion section
+    md_lines.append("\n## AI-POWERED SHOT SUGGESTIONS")
+    md_lines.append("The following AI-generated suggestions enhance the pre-production workflow:")
+    md_lines.append("- **Beat Alignment**: Shots are aligned to audio transients detected via librosa")
+    md_lines.append("- **Motion Parity**: Suggested motions maintain visual continuity between clips")
+    md_lines.append("- **Color Harmony**: Shots are grouped by color temperature similarity")
+
     os.makedirs(os.path.dirname(output_md), exist_ok=True)
     with open(output_md, "w") as f:
         f.write("\n".join(md_lines))

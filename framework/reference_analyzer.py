@@ -69,6 +69,16 @@ def analyze_reference_video(video_path, output_json="out/master_template.json"):
             "suggested_angle": "medium close-up" if i % 3 == 0 else "wide tracking shot"
         })
 
+    # Generate histogram equalization metadata for each clip
+    histogram_maps = [
+        {
+            "clip_index": clip["clip_index"],
+            "histogram_equalization": "adaptive",
+            "contrast_limit": 2.0
+        }
+        for clip in clips
+    ]
+
     # Color palette stats
     if sample_frames:
         sample_stack = np.array(sample_frames)

@@ -1,13 +1,13 @@
 {
   "name": "antigravity-remotion-engine",
-  "version": "1.0.0",
+"version": "1.0.1",
   "description": "Autonomous After Effects-Grade Remotion Video Production Engine",
   "main": "src/index.ts",
   "scripts": {
     "build": "remotion bundle src/index.ts",
     "ingest": "node scripts/discover-assets.mjs && node scripts/analyze-audio.mjs && node scripts/extract-subtitles.mjs",
     "render:remotion": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --gl=angle",
-    "render:ae": "powershell -Command \"Start-Process -FilePath 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/AfterFX.exe' -ArgumentList '-r', 'C:/Users/ADMIN/OneDrive/Desktop/ae/build_ae_master.jsx' -Wait; & 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/aerender.exe' -project 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/antigravity_master_build.aep' -comp 'MASTERPIECE_COMP' -output 'C:/Users/ADMIN\OneDrive\Desktop\ae\out\final_render_ae.mp4'\"",
+    "render:ae": "powershell -Command \"Start-Process -FilePath 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/AfterFX.exe' -ArgumentList '-r', 'C:/Users/ADMIN/OneDrive/Desktop/ae/build_ae_master.jsx' -Wait; & 'C:/Program Files/Adobe/Adobe After Effects 2025/Support Files/aerender.exe' -project 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/antigravity_master_build.aep' -comp 'MASTERPIECE_COMP' -output 'C:/Users/ADMIN/OneDrive/Desktop/ae/out/final_render_ae.mp4'\"",
     "render": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --gl=angle",
     "render:fast": "remotion render src/index.ts MainComposition out/final_render.mp4 --concurrency=8 --scale=0.5 --gl=angle",
     "typecheck": "tsc --noEmit",
@@ -15,7 +15,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "validate": "tsc --noEmit && eslint src/**/*.ts src/**/*.tsx && jest --coverage"
   },
   "dependencies": {
     "@remotion/effects": "^4.0.0",

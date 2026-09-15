@@ -11,6 +11,16 @@ OUT_DIR = os.path.join(PROJECT_DIR, "out")
 AE_EXE = r"C:\Program Files\Adobe\Adobe After Effects 2025\Support Files\AfterFX.exe"
 AERENDER_EXE = r"C:\Program Files\Adobe\Adobe After Effects 2025\Support Files\aerender.exe"
 
+def validate_color_profile(color_mean, color_std):
+    """Validate that color profile statistics are within acceptable ranges."""
+    if color_mean is None or color_std is None:
+        raise ValueError("Color profile mean and std cannot be None")
+    if len(color_mean) != 3 or len(color_std) != 3:
+        raise ValueError("Color profile must have exactly 3 BGR channels")
+    if any(s < 0 for s in color_std):
+        raise ValueError("Color standard deviation cannot be negative")
+    return True
+
 def map_assets_and_build(template_json="out/master_template.json"):
     if not os.path.exists(template_json):
         print(f"Error: Template file '{template_json}' not found.")
@@ -21,6 +31,9 @@ def map_assets_and_build(template_json="out/master_template.json"):
 
     color_mean = np.array(data["color_profile"]["mean_bgr"])
     color_std = np.array(data["color_profile"]["std_bgr"])
+
+    # Validate color profile before processing
+    validate_color_profile(color_mean, color_std)
 
     clips = data["clips"]
     print(f"[AssetMapper] Checking uploaded clips in {PUBLIC_DIR}...")

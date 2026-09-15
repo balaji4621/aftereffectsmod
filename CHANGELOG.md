@@ -18,6 +18,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Jest testing framework with initial unit tests for utility functions
 - System health dashboard in web UI displaying real-time system metrics
 - Custom LUT upload support for color grading presets
+- Validation pipeline command (`npm run validate`) combining typecheck, lint, and test
+- Version bumped to 1.0.1 with contribution updates
 
 ### Changed
 - Improved error handling and logging throughout Python engine modules

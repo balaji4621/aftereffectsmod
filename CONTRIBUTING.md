@@ -38,6 +38,15 @@ git push origin feature/your-feature-name
 ### 7. Create a Pull Request
 Open a pull request from your feature branch to the main repository.
 
+### 8. Validate Before Submitting
+```bash
+npm run validate
+```
+This runs TypeScript type checking, ESLint, and Jest tests in sequence.
+
+### 9. Code of Conduct and License
+By contributing, you agree that your contributions will be licensed under the project's license. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [LICENSE](LICENSE).
+
 ## Development Setup
 
 ### Prerequisites

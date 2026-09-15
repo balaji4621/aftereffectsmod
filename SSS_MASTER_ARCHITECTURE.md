@@ -74,3 +74,21 @@ Validates rendered video frames against golden-frame baselines:
 
 - **`antigravity-web` Pool**: Runs Linux Docker containers handling API intake, AI intelligence, FFmpeg GPU color matching, Blender rendering, and QA verification.
 - **`antigravity-ae` Pool**: Runs Windows Server instances licensed for Adobe After Effects 2025 to execute ExtendScript project generation and `aerender` exports.
+
+## 4. VALIDATION AND QUALITY GATES
+
+All contributions must pass a unified validation pipeline before merging:
+- **TypeScript**: Strict mode compilation with `tsc --noEmit`
+- **Linting**: ESLint with `@typescript-eslint` rules enforced
+- **Testing**: Jest with coverage thresholds (`npm run validate`)
+- **Pre-commit**: Husky hooks running lint-staged on every commit
+
+### Validation Command
+```bash
+npm run validate
+```
+This ensures code quality, type safety, and test coverage are maintained across all contributions.
+
+## 5. CONTRIBUTION TRACKING
+
+Each contribution is tracked via git commit messages following the format `feat:`, `fix:`, `docs:`, or `chore:` prefixes. A contributions log is maintained in `contributions.txt` for transparency.

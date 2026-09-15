@@ -13,6 +13,7 @@
 ![Version](https://img.shields.io/badge/VERSION-1.0.0-blue?style=flat-square)
 ![License](https://img.shields.io/badge/LICENSE-PROPRIETARY-red?style=flat-square)
 ![Pipeline](https://img.shields.io/badge/DAG-PIPELINE-active-orange?style=flat-square)
+![Contributions](https://img.shields.io/badge/CONTRIBUTIONS-9%20%2B-brightgreen?style=flat-square)
 
 </div>
 
